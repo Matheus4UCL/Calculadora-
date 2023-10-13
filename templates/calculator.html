@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nova Despesa</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Nova Despesa Compartilhada</h2>
+    <form method="POST">
+        <label for="description">Descrição da Despesa:</label>
+        <input type="text" name="description" required><br>
+        <label for="total">Valor Total:</label>
+        <input type="number" step="0.01" name="total" required><br>
+        <label>Participantes:</label>
+        <input type="checkbox" name="participants" value="Pessoa1"> Pessoa 1
+        <input type="checkbox" name="participants" value="Pessoa2"> Pessoa 2
+        <!-- Adicione mais participantes conforme necessário -->
+        <br>
+        <input type="submit" value="Registrar Despesa">
+    </form>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
